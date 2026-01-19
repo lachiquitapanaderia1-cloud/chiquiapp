@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChiquiApp - Reporte diario</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ChiquiApp</h1>
+      <p>Resumen diario de ventas y productos más vendidos.</p>
+      <nav>
+        <a href="/">Catálogo</a>
+        <a href="/orders.html">Pedidos</a>
+        <a href="/reports.html" class="active">Reporte diario</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Reporte diario</h2>
+        <form data-report-form>
+          <label>
+            Fecha
+            <input type="date" name="date" required />
+          </label>
+          <button type="submit">Consultar</button>
+        </form>
+      </section>
+      <section>
+        <h2>Resultados</h2>
+        <div data-report-output class="grid"></div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

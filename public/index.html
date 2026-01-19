@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChiquiApp - Catálogo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ChiquiApp</h1>
+      <p>Gestión simple de productos y pedidos.</p>
+      <nav>
+        <a href="/" class="active">Catálogo</a>
+        <a href="/orders.html">Pedidos</a>
+        <a href="/reports.html">Reporte diario</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Nuevo producto</h2>
+        <form data-product-form>
+          <label>
+            Nombre
+            <input type="text" name="name" placeholder="Ej. Concha" required />
+          </label>
+          <label>
+            Precio
+            <input type="number" name="price" step="0.01" min="0" required />
+          </label>
+          <label>
+            Foto (URL opcional)
+            <input type="url" name="photoUrl" placeholder="https://..." />
+          </label>
+          <label>
+            <input type="checkbox" name="available" checked />
+            Disponible para venta
+          </label>
+          <button type="submit">Guardar producto</button>
+        </form>
+      </section>
+      <section>
+        <h2>Catálogo</h2>
+        <div class="grid two" data-products></div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

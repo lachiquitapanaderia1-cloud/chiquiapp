@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChiquiApp - Pedidos</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ChiquiApp</h1>
+      <p>Registra pedidos de manera rápida.</p>
+      <nav>
+        <a href="/">Catálogo</a>
+        <a href="/orders.html" class="active">Pedidos</a>
+        <a href="/reports.html">Reporte diario</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Nuevo pedido</h2>
+        <form data-order-form>
+          <label>
+            Cliente
+            <input type="text" name="customer" placeholder="Nombre del cliente" required />
+          </label>
+          <label>
+            Notas
+            <textarea name="notes" rows="3" placeholder="Indicaciones especiales..."></textarea>
+          </label>
+          <div class="grid two" data-order-products></div>
+          <button type="submit">Registrar pedido</button>
+        </form>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
